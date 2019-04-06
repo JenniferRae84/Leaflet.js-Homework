@@ -102,6 +102,7 @@ fetch("https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime
                 weight: 1,
                 opacity: 1,
                 fillOpacity: 0.8
+                //bindPopup adds a popups that provide additional info about the earthquake on click
             }).bindPopup("<h1> Magnitude: " + feature.properties.mag + "</h1> <hr> " + latlng + "</h3>")
     } // end pointToLayer     
         }).addTo(myMap);
@@ -137,11 +138,7 @@ fetch("https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime
     };
     // Add the info legend to the map
     legend.addTo(myMap);
-
-
-    //Include popups that provide additional information 
-    // about the earthquake when a marker is clicked.
-    });
+});
 
     </script>
 </body>
